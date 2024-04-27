@@ -1,0 +1,36 @@
+{
+  "name": "project-final",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npx json-server ./src/movies.json",
+    "start": "parcel src/*.html",
+    "build": "parcel build src/index.html --public-url /project-final",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devohka/project-final.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Devohka/project-final/issues"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@parcel/namer-default": "^2.12.0",
+    "@pnotify/mobile": "^5.2.0",
+    "axios": "^1.6.8",
+    "gh-pages": "^6.1.1",
+    "json-server": "^1.0.0-alpha.23",
+    "lodash": "^4.17.21",
+    "parcel": "^2.12.0",
+    "pnotify": "^5.2.0"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3"
+  }
+}

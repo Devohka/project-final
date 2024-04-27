@@ -1,0 +1,24 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 400px;
+  height: 450px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, h2, h1, h3, h4 {
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(#d3d3d3, #a9a9a9, #696969);
+  font-family: Roboto;
+}
+/*# sourceMappingURL=index.008b0dfe.css.map */
