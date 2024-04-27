@@ -106,18 +106,18 @@ header {
 }
 
 
-.modal-info-backdrop .product__text {
+.modal-info-backdrop .product__text-modal {
     display: block;
 }
 
 .modal {
-    height: 450px;
+    height: 550px;
     display: flex;
     position: absolute;
     top: 50%;
     left: 20%;
     transform: translate(20%, -50%);
-    width: 700px;
+    width: 950px;
     background-color: #A52A2A;
 
     border-radius: 20px;
@@ -129,12 +129,40 @@ header {
     position: absolute;
     top: 20px;
     right: 10px;
-   
-}
-svg {
-    fill: #FFFFFF;
+    
 }
 
 .img-modal {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 550px;
     width: 500px;
 }
+
+.product__text-modal {
+    color: #FFFFFF;
+    font-size: 17px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.modal-add {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 600px;
+    background-color: white;
+  }
+
+  .add-movies__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+  }
+  
+  .add-movies__input {
+    width: auto;
+  }

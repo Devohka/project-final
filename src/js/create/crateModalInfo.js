@@ -16,10 +16,10 @@ export const createModalInfo = (objProduct) =>
   </svg>
 </button>
 <img src="${objProduct.img}" alt="poster-movies" class="img-modal">
-<p class="product__text-modal"> ${objProduct.title}</p>
-<p class="product__text-modal"> ${objProduct.year}</p>
-<p class="product__text-modal"> ${objProduct.genre}</p>
-<p class="product__text-modal"> ${objProduct.director}</p>
+<p class="product__text-modal">title: ${objProduct.title}</p>
+<p class="product__text-modal">year: ${objProduct.year}</p>
+<p class="product__text-modal">genre: ${objProduct.genre}</p>
+<p class="product__text-modal">director: ${objProduct.director}</p>
   </div>`;
 
 function check(value) {
