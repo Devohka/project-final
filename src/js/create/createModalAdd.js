@@ -24,7 +24,7 @@ export const makeMarkUpAddModal = () => {
       class="add-movies__input movies-year"
       name="year"
     />
-      <button type="submit" class="sumbitModalBtn">Add</button>
+      <button type="submit" class="sumbitModalBtn item_action-btn">Add</button>
     </form>`;
     return formElement;
 };

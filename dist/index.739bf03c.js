@@ -586,8 +586,10 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"ebWYT":[function(require,module,exports) {
 var _render = require("./render");
 var _openModalInfo = require("../js/modal/openModalInfo");
+var _openModalAdd = require("./modal/openModalAdd");
+var _deleteModalMovies = require("./delete/deleteModalMovies");
 
-},{"./render":"6Nkx6","../js/modal/openModalInfo":"uo9TP"}],"6Nkx6":[function(require,module,exports) {
+},{"./render":"6Nkx6","../js/modal/openModalInfo":"uo9TP","./modal/openModalAdd":"f1hZm","./delete/deleteModalMovies":"3yhID"}],"6Nkx6":[function(require,module,exports) {
 var _moviesFechAPI = require("./moviesFechAPI");
 (0, _moviesFechAPI.fetchMovies)();
 
@@ -5092,8 +5094,108 @@ function check(value) {
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cUgWO":[function(require,module,exports) {
-module.exports = JSON.parse('{"movies":[{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":1,"title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":2,"title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":3,"title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":4,"title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":5,"title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":1,"title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":2,"title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":3,"title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":4,"title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":5,"title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":1,"title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":2,"title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":3,"title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":4,"title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":5,"title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":1,"title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":2,"title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":3,"title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":4,"title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":5,"title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":1,"title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":2,"title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":3,"title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":4,"title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":5,"title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":1,"title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":2,"title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":3,"title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":4,"title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":5,"title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":1,"title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":2,"title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":3,"title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":4,"title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":5,"title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":1,"title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":2,"title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":3,"title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":4,"title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":5,"title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010}]}');
+module.exports = JSON.parse('{"movies":[{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":"1","title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":"2","title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":"3","title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":"4","title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":"5","title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":"1","title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":"2","title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":"3","title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":"4","title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":"5","title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"id":"11","title":"","genre":"","director":"","year":""},{"id":"12","title":"Emojy","genre":"sadas","director":"ewew","year":"2018"}]}');
 
-},{}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
+},{}],"f1hZm":[function(require,module,exports) {
+var _modalOpen = require("../add/modalOpen");
+const addMoviesFormRef = document.querySelector(".btn-modal-add");
+// addMoviesBtnRef.addEventListener("click", makeMarkUpAddModal)
+addMoviesFormRef.addEventListener("click", (0, _modalOpen.modalAddOpen));
+
+},{"../add/modalOpen":"4xSbC"}],"4xSbC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "modalAddOpen", ()=>modalAddOpen);
+var _createModalAdd = require("../create/createModalAdd");
+var _moviesFechAPI = require("../moviesFechAPI");
+const modalBackdrop = document.querySelector(".modal-add");
+const modalAddOpen = async (evt)=>{
+    console.log(1);
+    const backdrop = document.querySelector(".backdrop");
+    backdrop.classList.remove("is-hidden");
+    backdrop.style.display = "block";
+    modalBackdrop.innerHTML = (0, _createModalAdd.makeMarkUpAddModal)();
+    let length = 1;
+    globalThis.addMoviesFormRef = document.querySelector(".add-movies__form");
+    //? then()
+    // fetch("http://localhost:3000/Moviess").then(res => res.json()).then(res => {
+    //     length = res.length;
+    // });
+    //? async/await
+    try {
+        const resp = await fetch("http://localhost:3000/movies");
+        const data = await resp.json();
+        length = data.length;
+    } catch (err) {
+        console.log(err);
+    }
+    globalThis.addMoviesFormRef.addEventListener("submit", (evt)=>{
+        evt.preventDefault();
+        const newMovies = {
+            id: String(length + 1),
+            title: evt.currentTarget.elements.name.value,
+            genre: evt.currentTarget.elements.genre.value,
+            director: evt.currentTarget.elements.director.value,
+            year: evt.currentTarget.elements.year.value
+        };
+        console.log(newMovies);
+        (0, _moviesFechAPI.addMovies)(newMovies);
+        evt.currentTarget.reset();
+    });
+};
+
+},{"../create/createModalAdd":"2gjVg","../moviesFechAPI":"5Yo9S","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2gjVg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "makeMarkUpAddModal", ()=>makeMarkUpAddModal);
+const makeMarkUpAddModal = ()=>{
+    const formElement = `<form class="add-movies__form">
+      <input
+        type="text"
+        placeholder="title"
+        class="add-movies__input movies-name"
+        name="name"
+      />
+      <input
+        type="text"
+        placeholder="genre"
+        class="add-movies__input movies-genre"
+        name="genre"
+      />
+      <input
+        type="text"
+        placeholder="director"
+        class="add-movies__input movies-director"
+        name="director"
+      />
+      <input
+      type="text"
+      placeholder="year"
+      class="add-movies__input movies-year"
+      name="year"
+    />
+      <button type="submit" class="sumbitModalBtn item_action-btn">Add</button>
+    </form>`;
+    return formElement;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3yhID":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+const deleteBtn = document.getElementById("deleteBtn");
+deleteBtn.addEventListener("click", async ()=>{
+    const deleteId = document.getElementById("deleteId");
+    console.log(deleteId.value);
+    //? then()
+    // fetch(`http://localhost:3000/fruits/${deleteId.value}`,{ method: "DELETE"} );
+    //? async/await
+    // await fetch(`http://localhost:3000/fruits/${deleteId.value}`, {
+    //   method: "DELETE",
+    // });
+    await (0, _axiosDefault.default).delete(`http://localhost:3000/fruits/${deleteId.value}`);
+});
+
+},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
 
 //# sourceMappingURL=index.739bf03c.js.map

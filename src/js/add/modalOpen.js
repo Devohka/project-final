@@ -6,6 +6,7 @@ export const modalAddOpen = async (evt) => {
     console.log(1)
   const backdrop = document.querySelector(".backdrop");
   backdrop.classList.remove("is-hidden");
+  backdrop.style.display = "block";
   modalBackdrop.innerHTML = makeMarkUpAddModal();
   let length = 1;
   globalThis.addMoviesFormRef = document.querySelector(".add-movies__form");

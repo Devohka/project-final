@@ -43,6 +43,7 @@ header {
 
 .item_action-btn:hover {
   background: linear-gradient(#a52a2ae6, maroon);
+  box-shadow: 0 1px 3px #8b45131f, 0 2px 1px #8b451324, 0 2px 1px #8b451333;
 }
 
 .product__item {
@@ -91,10 +92,6 @@ header {
   pointer-events: none;
 }
 
-.modal-info-backdrop .product__text-modal {
-  display: block;
-}
-
 .modal {
   background-color: brown;
   border-radius: 20px;
@@ -129,8 +126,19 @@ header {
   font-size: 17px;
 }
 
+.backdrop {
+  opacity: 1;
+  background-color: #00000059;
+  transition: opacity .25s cubic-bezier(.4, 0, .2, 1);
+  display: none;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
 .modal-add {
-  background-color: #fff;
+  background: linear-gradient(#daa520, maroon);
+  border-radius: 20px;
   width: 400px;
   height: 600px;
   position: fixed;
@@ -147,6 +155,18 @@ header {
 }
 
 .add-movies__input {
+  border: #8b4513;
+  border-radius: 20px;
   width: auto;
+  padding: 10px;
+}
+
+.sumbitModalBtn {
+  border-radius: 20px;
+}
+
+.add-movies__input:hover {
+  border: 4px solid #8b4513;
+  box-shadow: 0 1px 3px #8b45131f, 0 2px 1px #8b451324, 0 2px 1px #8b451333;
 }
 /*# sourceMappingURL=index.c92073ef.css.map */
