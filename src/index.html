@@ -20,7 +20,7 @@
             <h2 class="title_title">Movies</h2>
             <ul class="title_list-action">
                 <li class="list_action-item">
-                    <button type="button" class="item_action-btn">comment</button>
+                    <button type="button" class="item_action-btn btn-comment">comments</button>
                 </li>
                 <li class="list_action-item">
                     <button type="button" class="item_action-btn">genres</button>
@@ -29,7 +29,7 @@
                     <button type="button" class="item_action-btn btn-modal-delete">delete</button>
                 </li>
                 <li class="list_action-item">
-                    <button type="button" class="item_action-btn btn-modal-add" >add your movie</button>
+                    <button type="button" class="item_action-btn btn-modal-add">add your movie</button>
                 </li>
             </ul>
         </div>
@@ -53,7 +53,24 @@
 
         <div class="backdrop-delete">
             <div class="modal-delete">
+                <input type="text" placeholder="Id" id="deleteId" class="delete-input-id add-movies__input">
+                <button type="button" id="deleteBtn" class="delete-btn item_action-btn ">
+                    Delete Movies
+                </button>
+            </div>
+        </div>
 
+        <div class="box-comment">
+            <div class="element-comment">
+                <ul class="list-comment">
+
+                </ul>
+                <form class="form-comment">
+                    <input type="text" placeholder="comment" class="add-movies__input add-comment__input"
+                        name="comment" />
+                        <button type="submit" class="btn-comment item_action-btn">Comment</button>
+                </form>
+                
             </div>
         </div>
 

@@ -31,6 +31,7 @@ export const modalAddOpen = async (evt) => {
     evt.preventDefault();
     const newMovies = {
       id: String(length + 1),
+      img: evt.currentTarget.elements.img.value,
       title: evt.currentTarget.elements.name.value,
       genre: evt.currentTarget.elements.genre.value,
       director: evt.currentTarget.elements.director.value,

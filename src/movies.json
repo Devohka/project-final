@@ -42,7 +42,7 @@
     },
     {
       "img": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-      "id": "1",
+      "id": "6",
       "title": "The Shawshank Redemption",
       "genre": "Drama",
       "director": "Frank Darabont",
@@ -50,7 +50,7 @@
     },
     {
       "img": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
-      "id": "2",
+      "id": "7",
       "title": "The Godfather",
       "genre": "Crime",
       "director": "Francis Ford Coppola",
@@ -58,7 +58,7 @@
     },
     {
       "img": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-      "id": "3",
+      "id": "8",
       "title": "Pulp Fiction",
       "genre": "Crime",
       "director": "Quentin Tarantino",
@@ -66,7 +66,7 @@
     },
     {
       "img": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
-      "id": "4",
+      "id": "9",
       "title": "The Dark Knight",
       "genre": "Action",
       "director": "Christopher Nolan",
@@ -74,7 +74,7 @@
     },
     {
       "img": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
-      "id": "5",
+      "id": "10",
       "title": "Inception",
       "genre": "Action",
       "director": "Christopher Nolan",
@@ -82,17 +82,21 @@
     },
     {
       "id": "11",
-      "title": "",
-      "genre": "",
-      "director": "",
-      "year": ""
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrytk7aG71ddB1nOYIik1v3bjWZ-OsM9tDY1lZguR-P-bRAxdPBNM2ia2nM-cVWL-KGbI&usqp=CAU",
+      "title": "The Emoji Movie",
+      "genre": "Комедія",
+      "director": "Тоні Леондіс",
+      "year": "2017"
+    }
+  ],
+  "comments": [
+    {
+      "id": "8227",
+      "text": "Привіт я зробив ці коментарі я думав буде ваще :)))"
     },
     {
-      "id": "12",
-      "title": "Emojy",
-      "genre": "sadas",
-      "director": "ewew",
-      "year": "2018"
+      "id": "7d4a",
+      "text": "Уррррааааааа"
     }
   ]
 }

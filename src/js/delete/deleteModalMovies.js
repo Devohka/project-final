@@ -1,13 +1,15 @@
 import axios from 'axios';
-const deleteBtn = document.getElementById("deleteBtn");
- deleteBtn.addEventListener("click", async () => {
-  const deleteId = document.getElementById("deleteId");
+const deleteId = document.querySelector(".delete-input-id");
+const deleteBtn = document.querySelector(".delete-btn");
+ deleteBtn.addEventListener("click", async (e) => {
+  e.currentTarget()
+ 
   console.log(deleteId.value);
   //? then()
-  // fetch(`http://localhost:3000/fruits/${deleteId.value}`,{ method: "DELETE"} );
+  // fetch(`http://localhost:3000/movies/${deleteId.value}`,{ method: "DELETE"} );
   //? async/await
-  // await fetch(`http://localhost:3000/fruits/${deleteId.value}`, {
+  // await fetch(`http://localhost:3000/movies/${deleteId.value}`, {
   //   method: "DELETE",
   // });
-  await axios.delete(`http://localhost:3000/fruits/${deleteId.value}`);
+  await axios.delete(`http://localhost:3000/movies/${deleteId.value}`);
 });

@@ -588,8 +588,10 @@ var _render = require("./render");
 var _openModalInfo = require("../js/modal/openModalInfo");
 var _openModalAdd = require("./modal/openModalAdd");
 var _deleteModalMovies = require("./delete/deleteModalMovies");
+var _openModalDelete = require("./modal/openModalDelete");
+var _postComment = require("./comments/postComment");
 
-},{"./render":"6Nkx6","../js/modal/openModalInfo":"uo9TP","./modal/openModalAdd":"f1hZm","./delete/deleteModalMovies":"3yhID"}],"6Nkx6":[function(require,module,exports) {
+},{"./render":"6Nkx6","../js/modal/openModalInfo":"uo9TP","./modal/openModalAdd":"f1hZm","./delete/deleteModalMovies":"3yhID","./modal/openModalDelete":"04NwT","./comments/postComment":"eHQTi"}],"6Nkx6":[function(require,module,exports) {
 var _moviesFechAPI = require("./moviesFechAPI");
 (0, _moviesFechAPI.fetchMovies)();
 
@@ -5094,7 +5096,7 @@ function check(value) {
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cUgWO":[function(require,module,exports) {
-module.exports = JSON.parse('{"movies":[{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":"1","title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":"2","title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":"3","title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":"4","title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":"5","title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":"1","title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":"2","title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":"3","title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":"4","title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":"5","title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"id":"11","title":"","genre":"","director":"","year":""},{"id":"12","title":"Emojy","genre":"sadas","director":"ewew","year":"2018"}]}');
+module.exports = JSON.parse('{"movies":[{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":"1","title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":"2","title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":"3","title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":"4","title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":"5","title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"img":"https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg","id":"6","title":"The Shawshank Redemption","genre":"Drama","director":"Frank Darabont","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg","id":"7","title":"The Godfather","genre":"Crime","director":"Francis Ford Coppola","year":1972},{"img":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg","id":"8","title":"Pulp Fiction","genre":"Crime","director":"Quentin Tarantino","year":1994},{"img":"https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg","id":"9","title":"The Dark Knight","genre":"Action","director":"Christopher Nolan","year":2008},{"img":"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg","id":"10","title":"Inception","genre":"Action","director":"Christopher Nolan","year":2010},{"id":"11","img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrytk7aG71ddB1nOYIik1v3bjWZ-OsM9tDY1lZguR-P-bRAxdPBNM2ia2nM-cVWL-KGbI&usqp=CAU","title":"The Emoji Movie","genre":"\u041A\u043E\u043C\u0435\u0434\u0456\u044F","director":"\u0422\u043E\u043D\u0456 \u041B\u0435\u043E\u043D\u0434\u0456\u0441","year":"2017"}],"comments":[{"id":"8227","text":"\u041F\u0440\u0438\u0432\u0456\u0442 \u044F \u0437\u0440\u043E\u0431\u0438\u0432 \u0446\u0456 \u043A\u043E\u043C\u0435\u043D\u0442\u0430\u0440\u0456 \u044F \u0434\u0443\u043C\u0430\u0432 \u0431\u0443\u0434\u0435 \u0432\u0430\u0449\u0435 :)))"},{"id":"7d4a","text":"\u0423\u0440\u0440\u0440\u0440\u0430\u0430\u0430\u0430\u0430\u0430\u0430"}]}');
 
 },{}],"f1hZm":[function(require,module,exports) {
 var _modalOpen = require("../add/modalOpen");
@@ -5133,6 +5135,7 @@ const modalAddOpen = async (evt)=>{
         evt.preventDefault();
         const newMovies = {
             id: String(length + 1),
+            img: evt.currentTarget.elements.img.value,
             title: evt.currentTarget.elements.name.value,
             genre: evt.currentTarget.elements.genre.value,
             director: evt.currentTarget.elements.director.value,
@@ -5150,6 +5153,12 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "makeMarkUpAddModal", ()=>makeMarkUpAddModal);
 const makeMarkUpAddModal = ()=>{
     const formElement = `<form class="add-movies__form">
+    <input
+    type="text"
+    placeholder="img"
+    class="add-movies__input movies-name"
+    name="img"
+  />
       <input
         type="text"
         placeholder="title"
@@ -5183,19 +5192,82 @@ const makeMarkUpAddModal = ()=>{
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-const deleteBtn = document.getElementById("deleteBtn");
-deleteBtn.addEventListener("click", async ()=>{
-    const deleteId = document.getElementById("deleteId");
+const deleteId = document.querySelector(".delete-input-id");
+const deleteBtn = document.querySelector(".delete-btn");
+deleteBtn.addEventListener("click", async (e)=>{
+    e.currentTarget();
     console.log(deleteId.value);
     //? then()
-    // fetch(`http://localhost:3000/fruits/${deleteId.value}`,{ method: "DELETE"} );
+    // fetch(`http://localhost:3000/movies/${deleteId.value}`,{ method: "DELETE"} );
     //? async/await
-    // await fetch(`http://localhost:3000/fruits/${deleteId.value}`, {
+    // await fetch(`http://localhost:3000/movies/${deleteId.value}`, {
     //   method: "DELETE",
     // });
-    await (0, _axiosDefault.default).delete(`http://localhost:3000/fruits/${deleteId.value}`);
+    await (0, _axiosDefault.default).delete(`http://localhost:3000/movies/${deleteId.value}`);
 });
 
-},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
+},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"04NwT":[function(require,module,exports) {
+var _deleteModalMovies = require("../delete/deleteModalMovies");
+const deleteModal = document.querySelector(".modal-delete");
+const deletBtn = document.querySelector(".btn-modal-delete");
+const backdropDelete = document.querySelector(".backdrop-delete");
+deletBtn.addEventListener("click", ()=>{
+    console.log(1);
+    backdropDelete.style.display = "block";
+});
+
+},{"../delete/deleteModalMovies":"3yhID"}],"eHQTi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "UrlComment", ()=>UrlComment);
+var _boxComment = require("./boxComment");
+const UrlComment = `http://localhost:3000/comments`;
+const boxComment = document.querySelector(".box-comment");
+const formComment = document.querySelector(".form-comment");
+const openBtnComment = document.querySelector(".btn-comment");
+(0, _boxComment.fetchUrl)(UrlComment).then((data)=>data.json()).then((data)=>// console.log(data)
+    (0, _boxComment.createComment)(data));
+formComment.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const newComment = {
+        text: e.currentTarget.elements.comment.value
+    };
+    e.currentTarget.reset();
+    return (0, _boxComment.addComment)(newComment);
+});
+openBtnComment.addEventListener("click", ()=>{
+    boxComment.style.display = "block";
+});
+
+},{"./boxComment":"l3Wj0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l3Wj0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "fetchUrl", ()=>fetchUrl);
+parcelHelpers.export(exports, "createComment", ()=>createComment);
+parcelHelpers.export(exports, "addComment", ()=>addComment);
+var _postComment = require("./postComment");
+const listComment = document.querySelector(".list-comment");
+function fetchUrl(UrlComment) {
+    const data = fetch(UrlComment);
+    return data;
+}
+function createComment(data) {
+    data.forEach((comments)=>{
+        listComment.insertAdjacentHTML("beforeend", `<li class="item-comments">
+              <p class="text-comments">${comments.text}</p>
+            </li>`);
+    });
+}
+const addComment = (newComment)=>{
+    return fetch((0, _postComment.UrlComment), {
+        method: "POST",
+        body: JSON.stringify(newComment),
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    }).then((res)=>res.json()).then((post)=>console.log(post)).catch((error)=>console.log(error));
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./postComment":"eHQTi"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
 
 //# sourceMappingURL=index.739bf03c.js.map

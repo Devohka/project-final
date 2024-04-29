@@ -1,5 +1,11 @@
 export const makeMarkUpAddModal = () => {
-    const formElement = `<form class="add-movies__form">
+  const formElement = `<form class="add-movies__form">
+    <input
+    type="text"
+    placeholder="img"
+    class="add-movies__input movies-name"
+    name="img"
+  />
       <input
         type="text"
         placeholder="title"
@@ -26,5 +32,5 @@ export const makeMarkUpAddModal = () => {
     />
       <button type="submit" class="sumbitModalBtn item_action-btn">Add</button>
     </form>`;
-    return formElement;
+  return formElement;
 };
