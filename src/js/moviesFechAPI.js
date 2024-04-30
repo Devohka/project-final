@@ -1,6 +1,6 @@
 
 
-const Url = `http://localhost:3000/movies`;
+export const Url = `http://localhost:3000/movies`;
 
 import { createProductsMarkUp } from "./create/createCardMovies";
 import axios from 'axios';

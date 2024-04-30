@@ -590,14 +590,16 @@ var _openModalAdd = require("./modal/openModalAdd");
 var _deleteModalMovies = require("./delete/deleteModalMovies");
 var _openModalDelete = require("./modal/openModalDelete");
 var _postComment = require("./comments/postComment");
+var _searchElement = require("./search/searchElement");
 
-},{"./render":"6Nkx6","../js/modal/openModalInfo":"uo9TP","./modal/openModalAdd":"f1hZm","./delete/deleteModalMovies":"3yhID","./modal/openModalDelete":"04NwT","./comments/postComment":"eHQTi"}],"6Nkx6":[function(require,module,exports) {
+},{"./render":"6Nkx6","../js/modal/openModalInfo":"uo9TP","./modal/openModalAdd":"f1hZm","./delete/deleteModalMovies":"3yhID","./modal/openModalDelete":"04NwT","./comments/postComment":"eHQTi","./search/searchElement":"1li5N"}],"6Nkx6":[function(require,module,exports) {
 var _moviesFechAPI = require("./moviesFechAPI");
 (0, _moviesFechAPI.fetchMovies)();
 
 },{"./moviesFechAPI":"5Yo9S"}],"5Yo9S":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Url", ()=>Url);
 parcelHelpers.export(exports, "fetchMovies", ()=>fetchMovies);
 parcelHelpers.export(exports, "addMovies", ()=>addMovies);
 var _createCardMovies = require("./create/createCardMovies");
@@ -5268,6 +5270,34 @@ const addComment = (newComment)=>{
     }).then((res)=>res.json()).then((post)=>console.log(post)).catch((error)=>console.log(error));
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./postComment":"eHQTi"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
+},{"./postComment":"eHQTi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1li5N":[function(require,module,exports) {
+var _moviesFechAPI = require("../moviesFechAPI");
+const searchBtn = document.querySelector(".search-btn");
+const input = document.querySelector(".searchs-input");
+const boxSearchs = document.querySelector(".box-searchs");
+const buttonsListEl = document.querySelector(".buttons__list");
+searchBtn.addEventListener("click", ()=>{
+    boxSearchs.style.display = "block";
+});
+input.addEventListener("input", (e)=>{
+    fetch((0, _moviesFechAPI.Url)).then((res)=>{
+        return res.json();
+    }).then((data)=>{
+        if (e.currentTarget >= 2 && e.currentTarget <= 10) {
+            buttonsListEl.style.display = "block";
+            data.forEach((movies)=>{
+                buttonsListEl.insertAdjacentHTML("beforeend", `<li class="movies__item">
+                       <button class="movies__button">${movies.title}</button>
+                    </li>`);
+            });
+        }
+        buttonsListEl.addEventListener("click", (e)=>{
+            if (e.target.nodeName === "LI" || e.target.nodeName === "UL") return;
+            buttonsListEl.style.display = "none";
+        });
+    });
+}, 500);
+
+},{"../moviesFechAPI":"5Yo9S"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
 
 //# sourceMappingURL=index.739bf03c.js.map
