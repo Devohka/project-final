@@ -5272,31 +5272,24 @@ const addComment = (newComment)=>{
 
 },{"./postComment":"eHQTi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1li5N":[function(require,module,exports) {
 var _moviesFechAPI = require("../moviesFechAPI");
-const searchBtn = document.querySelector(".search-btn");
 const input = document.querySelector(".searchs-input");
-const boxSearchs = document.querySelector(".box-searchs");
+// const boxSearchs = document.querySelector(".box-searchs");
 const buttonsListEl = document.querySelector(".buttons__list");
-searchBtn.addEventListener("click", ()=>{
-    boxSearchs.style.display = "block";
-});
-input.addEventListener("input", (e)=>{
-    fetch((0, _moviesFechAPI.Url)).then((res)=>{
-        return res.json();
-    }).then((data)=>{
-        if (e.currentTarget >= 2 && e.currentTarget <= 10) {
-            buttonsListEl.style.display = "block";
-            data.forEach((movies)=>{
-                buttonsListEl.insertAdjacentHTML("beforeend", `<li class="movies__item">
-                       <button class="movies__button">${movies.title}</button>
-                    </li>`);
+function searchElement(input) {
+    fetch((0, _moviesFechAPI.Url)).then((res)=>res.json()).then((data)=>{
+        function getOptions(word, data) {
+            return data.filter((m)=>{
+                // Співпадає значення слова з значенням масиву
+                const regex = new RegExp(word, "gi");
+                return m.title.match(regex);
             });
         }
-        buttonsListEl.addEventListener("click", (e)=>{
-            if (e.target.nodeName === "LI" || e.target.nodeName === "UL") return;
-            buttonsListEl.style.display = "none";
-        });
+        console.log(getOptions(input, data));
     });
-}, 500);
+}
+input.addEventListener("input", (e)=>{
+    searchElement(e.currentTarget.value);
+});
 
 },{"../moviesFechAPI":"5Yo9S"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
 

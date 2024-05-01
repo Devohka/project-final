@@ -1,39 +1,32 @@
 
-const searchBtn = document.querySelector(".search-btn");
+
 const input = document.querySelector(".searchs-input");
-const boxSearchs = document.querySelector(".box-searchs");
+// const boxSearchs = document.querySelector(".box-searchs");
 const buttonsListEl = document.querySelector(".buttons__list");
 import { Url } from "../moviesFechAPI";
+  
 
-searchBtn.addEventListener("click", () => {
-    boxSearchs.style.display = "block";
-});
+function searchElement(input) {
+    fetch(Url)
+    .then(res => res.json())
+    .then(data => {
+        function getOptions(word, data) {
+            return data.filter(m => {
+                 
+                // Співпадає значення слова з значенням масиву
+                const regex = new RegExp(word, 'gi');
+                return m.title.match(regex)
+            }); 
+             
+        };
+        console.log(getOptions(input, data));
+    });
+};
 
 input.addEventListener("input", (e) => {
-    fetch(Url)
-    .then((res) => {
-        return res.json();
-    })
-    .then((data) => {
-        if (e.currentTarget >= 2 && e.currentTarget <= 10) {
-            buttonsListEl.style.display = "block";
-            data.forEach((movies) => {
-                buttonsListEl.insertAdjacentHTML(
-                    "beforeend",
-                    `<li class="movies__item">
-                       <button class="movies__button">${movies.title}</button>
-                    </li>`
-                );
-            });
-        };
-        buttonsListEl.addEventListener("click", (e) => {
-            if (e.target.nodeName === "LI" || e.target.nodeName === "UL") {
-                return;
-              }
-            buttonsListEl.style.display = "none";
-           
-          });
-        
-    });
+    searchElement(e.currentTarget.value);
+});
 
-}, 500);
+
+
+

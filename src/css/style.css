@@ -86,7 +86,7 @@ header {
 }
 
 .movies-crad {
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .modal-info-backdrop {
@@ -264,6 +264,9 @@ header {
     border-radius: 20px;
     margin-bottom: 15px;
 }
+
+
+
 
 
 .box-searchs {

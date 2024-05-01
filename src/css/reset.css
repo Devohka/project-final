@@ -33,6 +33,11 @@ body {
     font-family: Roboto;
 }
 
+
+main {
+  margin-top: 100px;
+}
+
   /* hover-bg-c #800000 */
   /* bg-c #A52A2A */
   /* box-shodov #8B4513*/
