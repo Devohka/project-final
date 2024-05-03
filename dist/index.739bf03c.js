@@ -631,7 +631,7 @@ const createProductsMarkUp = (productsArr, list)=>{
     productsArr.forEach((product)=>{
         list.insertAdjacentHTML("beforeend", `<li class="product__item">
         <img src="${product.img}" alt="poster-movies">
-          <p class="product__text">title: ${product.title}</p>
+          <p class="product__text title-text">title: ${product.title}</p>
           <p class="product__text">year: ${product.year}</p>
           </li>`);
     });
@@ -5272,6 +5272,7 @@ const addComment = (newComment)=>{
 
 },{"./postComment":"eHQTi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1li5N":[function(require,module,exports) {
 var _moviesFechAPI = require("../moviesFechAPI");
+var _createCardMovies = require("../create/createCardMovies");
 const input = document.querySelector(".searchs-input");
 // const boxSearchs = document.querySelector(".box-searchs");
 const buttonsListEl = document.querySelector(".buttons__list");
@@ -5291,6 +5292,6 @@ input.addEventListener("input", (e)=>{
     searchElement(e.currentTarget.value);
 });
 
-},{"../moviesFechAPI":"5Yo9S"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
+},{"../moviesFechAPI":"5Yo9S","../create/createCardMovies":"hDF5H"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequiref492")
 
 //# sourceMappingURL=index.739bf03c.js.map

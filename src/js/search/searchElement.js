@@ -4,7 +4,7 @@ const input = document.querySelector(".searchs-input");
 // const boxSearchs = document.querySelector(".box-searchs");
 const buttonsListEl = document.querySelector(".buttons__list");
 import { Url } from "../moviesFechAPI";
-  
+import {createProductsMarkUp} from "../create/createCardMovies" 
 
 function searchElement(input) {
     fetch(Url)
@@ -17,7 +17,7 @@ function searchElement(input) {
                 const regex = new RegExp(word, 'gi');
                 return m.title.match(regex)
             }); 
-             
+           
         };
         console.log(getOptions(input, data));
     });
