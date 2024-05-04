@@ -2,7 +2,7 @@ import axios from 'axios';
 const deleteId = document.querySelector(".delete-input-id");
 const deleteBtn = document.querySelector(".delete-btn");
  deleteBtn.addEventListener("click", async (e) => {
-  e.currentTarget()
+
  
   console.log(deleteId.value);
   //? then()

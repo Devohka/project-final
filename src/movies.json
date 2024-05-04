@@ -1,14 +1,6 @@
 {
   "movies": [
     {
-      "img": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
-      "id": "1",
-      "title": "The Shawshank Redemption",
-      "genre": "Drama",
-      "director": "Frank Darabont",
-      "year": 1994
-    },
-    {
       "img": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
       "id": "2",
       "title": "The Godfather",
@@ -97,6 +89,10 @@
     {
       "id": "7d4a",
       "text": "Уррррааааааа"
+    },
+    {
+      "id": "b94e",
+      "text": "dsfs"
     }
   ]
 }
